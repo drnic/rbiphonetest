@@ -1,10 +1,10 @@
 = iphoneruby
 
-* FIX (url)
+* http://iphoneruby.rubyforge.org
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Want to write iPhone unit tests? Want to write them in Ruby? 
 
 == FEATURES/PROBLEMS:
 
@@ -12,15 +12,37 @@ FIX (describe your package)
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+* Create a new iPhone project using Xcode templates
+* Open the terminal
+* Change to project folder
+* `iphoneruby .`
+
+This adds the test framework, a Rakefile, and an `autotest` config file.
+
+You can now create testable Objective-C models/classes using the generator:
+	
+	$script/generate model MyModel
+		  create  Classes/WidgetMaker.h
+		  create  Classes/WidgetMaker.m
+		  create  test/test_widget_maker.rb
+
+To run tests you have several options:
+	
+1. `rake` or `rake test`
+1. `autotest` (after installing the ZenTest gem)
+
+All options will re-build the Objective-C code (if necessary) before running the tests.
+
+If using autotest, your tests will be re-run if the test files or the Objective-C files are modified.
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* RubyCocoa (installed on OS X Leopard; latest version at http://rubycocoa.com)
+* XCode 3.1 (containing the iPhone SDK)
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* sudo gem install iphoneruby
 
 == LICENSE:
 

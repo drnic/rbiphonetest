@@ -2,7 +2,7 @@ History.txt
 License.txt
 Manifest.txt
 PostInstall.txt
-README.txt
+README.rdoc
 Rakefile
 app_generators/iphoneruby/USAGE
 app_generators/iphoneruby/iphoneruby_generator.rb
