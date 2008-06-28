@@ -2,7 +2,7 @@ require 'iphoneruby/version'
 
 AUTHOR = 'Dr Nic Williams'
 EMAIL = "drnicwilliams@gmail.com"
-DESCRIPTION = "Provides a testing framework for iPhone Xcode projects, using RubyCocoa"
+DESCRIPTION = "Want to write iPhone unit tests? Want to write them in Ruby?"
 GEM_NAME = 'iphoneruby' # what ppl will type to install your gem
 RUBYFORGE_PROJECT = 'iphoneruby' # The unix name for your project
 HOMEPATH = "http://github.com/drnic/iphoneruby"
