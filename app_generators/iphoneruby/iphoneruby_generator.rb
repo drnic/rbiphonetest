@@ -34,8 +34,8 @@ class IphonerubyGenerator < RubiGen::Base
   protected
     def banner
       <<-EOS
-Want to write unit tests in Ruby? Run this generator
-in the root folder of your Xcode project for your iPhone app.
+Want to write iPhone unit tests? Want to write them in Ruby? 
+Run this generator in the root folder of your Xcode project for your iPhone app.
 
 USAGE: #{spec.name} name
 EOS
