@@ -4,14 +4,18 @@
 
 == DESCRIPTION:
 
-Want to write iPhone unit tests? Want to write them in Ruby? 
+Want to write iPhone apps with unit tests? Want to write them in Ruby? 
 
 == FEATURES/PROBLEMS:
 
 * Installs a Ruby-based unit testing framework into an iPhone/Objective-C/Xcode project
 * Provides generators to create Objective-C classes with associated Ruby tests
 
-[Currently only test/unit tests created; rspec etc coming soon]
+Known issues:
+	
+* Currently only test/unit tests created; rspec etc coming soon
+* Currently only supports Foundation framework, since its common between OS X and iPhone
+* The plan is to mock out all the UIKit.framework classes so they can exist in RubyCocoa land.
 
 == SYNOPSIS:
 
