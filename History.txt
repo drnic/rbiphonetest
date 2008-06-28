@@ -1,4 +1,5 @@
-== 0.0.1 2008-06-28
+== 0.1.0 2008-06-28
 
-* 1 major enhancement:
-  * Initial release
+* Initial release
+	* iphoneruby cmd - adds test framework to your Xcode project
+	* script/generate model FooBar - creates Classes/FooBar.h+m and test/test_foo_bar.rb
