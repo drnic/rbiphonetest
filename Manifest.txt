@@ -32,8 +32,3 @@ test/test_helper.rb
 test/test_iphoneruby.rb
 test/test_iphoneruby_generator.rb
 test/test_model_generator.rb
-website/index.html
-website/index.txt
-website/javascripts/rounded_corners_lite.inc.js
-website/stylesheets/screen.css
-website/template.html.erb
