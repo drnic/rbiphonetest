@@ -24,7 +24,7 @@ This adds the test framework, a Rakefile, and an `autotest` config file.
 
 You can now create testable Objective-C models/classes using the generator:
 	
-	$ script/generate model MyModel
+	$ script/generate model WidgetMaker
 		  create  Classes/WidgetMaker.h
 		  create  Classes/WidgetMaker.m
 		  create  test/test_widget_maker.rb
