@@ -8,7 +8,10 @@ Want to write iPhone unit tests? Want to write them in Ruby?
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Installs a Ruby-based unit testing framework into an iPhone/Objective-C/Xcode project
+* Provides generators to create Objective-C classes with associated Ruby tests
+
+[Currently only test/unit tests created; rspec etc coming soon]
 
 == SYNOPSIS:
 
@@ -48,7 +51,7 @@ If using autotest, your tests will be re-run if the test files or the Objective-
 
 (The MIT License)
 
-Copyright (c) 2008 FIXME full name
+Copyright (c) 2008 Dr Nic Williams
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
