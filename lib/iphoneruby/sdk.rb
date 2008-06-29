@@ -1,13 +1,20 @@
 class IPhoneRuby::SDK
   IPHONE_SDK_FOLDER = "/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.0.sdk/System/Library/Frameworks"
-
+  MACOSX_SDK_FOLDER = "/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks"
+  
   def self.platform(platform)
     case platform.to_sym
     when :iphone
       self.new IPHONE_SDK_FOLDER
-    when :cocoa
-      self.new nil
+    when :macosx
+      self.new MACOSX_SDK_FOLDER
     end
+  end
+  
+  def self.similar_framework_names(platform_a = :macosx, platform_b = :iphone)
+    frameworks_a = self.platform(platform_a).frameworks
+    frameworks_b = self.platform(platform_b).frameworks
+    frameworks_a & frameworks_b
   end
   
   attr_reader :frameworks_path
