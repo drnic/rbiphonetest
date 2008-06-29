@@ -30,9 +30,14 @@ class IPhoneRuby::SDK
         platform_a, platform_b)
       mem[framework] = headers.inject({}) do |mem2, header|
         header_path_a = @platform_a.header_path(framework, header)
+        methods_a = "#{ENV['TMPDIR']}/#{platform_a}.h"
+        `grep "^[-+]" '#{header_path_a}' > #{methods_a}`
         header_path_b = @platform_b.header_path(framework, header)
-        diff = `diff -u '#{header_path_a}' '#{header_path_b}'`
-        mem2[header] = OpenStruct.new(:diff? => (diff != ""))
+        methods_b = "#{ENV['TMPDIR']}/#{platform_b}.h"
+        `grep "^[-+]" '#{header_path_b}' > #{methods_b}`
+        # methods - cat path | grep "^[-+]"
+        diff = `diff '#{methods_a}' '#{methods_b}'`
+        mem2[header] = OpenStruct.new(:diff? => (diff != ""), :methods_diff => diff)
         mem2
       end
       mem
@@ -62,4 +67,8 @@ class IPhoneRuby::SDK
   def header_path(framework, header)
     File.join frameworks_path, "#{framework}.framework", "Headers", "#{header}.h"
   end
+  
+  # TODO - perhaps generate bridgesupport xml for each header
+  # gen_bridge_metadata -F final -f /Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS2.0.sdk/System/Library/Frameworks/UIKit.framework UIView.h -o /tmp/UIView.bridgesupport
+  # except this doesn't work... :|
 end

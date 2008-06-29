@@ -4,36 +4,36 @@
 ** ABMultiValue.h *some differences*
 ** ABPerson.h *some differences*
 ** ABRecord.h *some differences*
-** AddressBook.h *some differences*
+** AddressBook.h 
 
 * AudioToolbox
-** AUGraph.h *some differences*
-** AudioFile.h *some differences*
-** AudioFileStream.h *some differences*
-** AudioFormat.h *some differences*
-** AudioQueue.h *some differences*
-** AudioServices.h *some differences*
-** AudioToolbox.h *some differences*
+** AUGraph.h 
+** AudioFile.h 
+** AudioFileStream.h 
+** AudioFormat.h 
+** AudioQueue.h 
+** AudioServices.h 
+** AudioToolbox.h 
 
 * AudioUnit
-** AUComponent.h *some differences*
-** AudioOutputUnit.h *some differences*
-** AudioUnit.h *some differences*
-** AudioUnitParameters.h *some differences*
-** AudioUnitProperties.h *some differences*
+** AUComponent.h 
+** AudioOutputUnit.h 
+** AudioUnit.h 
+** AudioUnitParameters.h 
+** AudioUnitProperties.h 
 
 * CoreAudio
-** CoreAudioTypes.h *some differences*
+** CoreAudioTypes.h 
 
 * CoreFoundation
 ** CFArray.h 
 ** CFAttributedString.h 
 ** CFBag.h 
-** CFBase.h *some differences*
+** CFBase.h 
 ** CFBinaryHeap.h 
 ** CFBitVector.h 
-** CFBundle.h *some differences*
-** CFByteOrder.h *some differences*
+** CFBundle.h 
+** CFByteOrder.h 
 ** CFCalendar.h 
 ** CFCharacterSet.h 
 ** CFData.h 
@@ -41,35 +41,35 @@
 ** CFDateFormatter.h 
 ** CFDictionary.h 
 ** CFError.h 
-** CFFileDescriptor.h *some differences*
+** CFFileDescriptor.h 
 ** CFLocale.h 
 ** CFMachPort.h 
 ** CFMessagePort.h 
-** CFNotificationCenter.h *some differences*
-** CFNumber.h *some differences*
+** CFNotificationCenter.h 
+** CFNumber.h 
 ** CFNumberFormatter.h 
-** CFPlugIn.h *some differences*
-** CFPlugInCOM.h *some differences*
+** CFPlugIn.h 
+** CFPlugInCOM.h 
 ** CFPreferences.h 
 ** CFPropertyList.h 
-** CFRunLoop.h *some differences*
+** CFRunLoop.h 
 ** CFSet.h 
-** CFSocket.h *some differences*
+** CFSocket.h 
 ** CFStream.h 
-** CFString.h *some differences*
+** CFString.h 
 ** CFStringEncodingExt.h 
 ** CFTimeZone.h 
 ** CFTree.h 
-** CFURL.h *some differences*
+** CFURL.h 
 ** CFURLAccess.h 
 ** CFUUID.h 
-** CoreFoundation.h *some differences*
+** CoreFoundation.h 
 
 * Foundation
-** Foundation.h *some differences*
+** Foundation.h 
 ** FoundationErrors.h 
-** NSArray.h *some differences*
-** NSAutoreleasePool.h *some differences*
+** NSArray.h 
+** NSAutoreleasePool.h 
 ** NSBundle.h 
 ** NSByteOrder.h 
 ** NSCalendar.h 
@@ -77,108 +77,108 @@
 ** NSCoder.h *some differences*
 ** NSData.h 
 ** NSDate.h 
-** NSDateFormatter.h *some differences*
+** NSDateFormatter.h 
 ** NSDecimal.h 
 ** NSDecimalNumber.h 
 ** NSDictionary.h 
 ** NSEnumerator.h 
 ** NSError.h 
-** NSException.h *some differences*
+** NSException.h 
 ** NSFileHandle.h 
-** NSFileManager.h *some differences*
+** NSFileManager.h 
 ** NSFormatter.h 
-** NSHTTPCookie.h *some differences*
-** NSHTTPCookieStorage.h *some differences*
-** NSIndexPath.h *some differences*
+** NSHTTPCookie.h 
+** NSHTTPCookieStorage.h 
+** NSIndexPath.h 
 ** NSIndexSet.h 
-** NSInvocation.h *some differences*
-** NSKeyValueCoding.h *some differences*
-** NSKeyValueObserving.h *some differences*
+** NSInvocation.h 
+** NSKeyValueCoding.h 
+** NSKeyValueObserving.h 
 ** NSKeyedArchiver.h *some differences*
 ** NSLocale.h 
 ** NSLock.h 
 ** NSMethodSignature.h 
-** NSNetServices.h *some differences*
+** NSNetServices.h 
 ** NSNotification.h 
 ** NSNotificationQueue.h 
 ** NSNull.h 
-** NSNumberFormatter.h *some differences*
-** NSObjCRuntime.h *some differences*
-** NSObject.h *some differences*
+** NSNumberFormatter.h 
+** NSObjCRuntime.h 
+** NSObject.h 
 ** NSOperation.h 
 ** NSPathUtilities.h 
-** NSPort.h *some differences*
+** NSPort.h 
 ** NSProcessInfo.h 
 ** NSPropertyList.h 
 ** NSProxy.h 
 ** NSRange.h 
-** NSRunLoop.h *some differences*
+** NSRunLoop.h 
 ** NSScanner.h 
 ** NSSet.h 
 ** NSSortDescriptor.h 
-** NSStream.h *some differences*
-** NSString.h *some differences*
+** NSStream.h 
+** NSString.h 
 ** NSThread.h 
 ** NSTimeZone.h 
 ** NSTimer.h 
-** NSURL.h *some differences*
-** NSURLAuthenticationChallenge.h *some differences*
-** NSURLCache.h *some differences*
-** NSURLConnection.h *some differences*
-** NSURLCredential.h *some differences*
-** NSURLCredentialStorage.h *some differences*
-** NSURLError.h *some differences*
-** NSURLProtectionSpace.h *some differences*
-** NSURLProtocol.h *some differences*
-** NSURLRequest.h *some differences*
-** NSURLResponse.h *some differences*
-** NSUserDefaults.h *some differences*
+** NSURL.h 
+** NSURLAuthenticationChallenge.h 
+** NSURLCache.h 
+** NSURLConnection.h 
+** NSURLCredential.h 
+** NSURLCredentialStorage.h 
+** NSURLError.h 
+** NSURLProtectionSpace.h 
+** NSURLProtocol.h 
+** NSURLRequest.h 
+** NSURLResponse.h 
+** NSUserDefaults.h 
 ** NSValue.h 
 ** NSXMLParser.h 
-** NSZone.h *some differences*
+** NSZone.h 
 
 * IOKit
 
 * OpenAL
-** al.h *some differences*
-** alc.h *some differences*
+** al.h 
+** alc.h 
 
 * QuartzCore
 ** CAAnimation.h *some differences*
-** CABase.h *some differences*
+** CABase.h 
 ** CALayer.h *some differences*
-** CAMediaTiming.h *some differences*
-** CAMediaTimingFunction.h *some differences*
-** CAScrollLayer.h *some differences*
+** CAMediaTiming.h 
+** CAMediaTimingFunction.h 
+** CAScrollLayer.h 
 ** CATiledLayer.h 
-** CATransaction.h *some differences*
-** CATransform3D.h *some differences*
-** CoreAnimation.h *some differences*
-** QuartzCore.h *some differences*
+** CATransaction.h 
+** CATransform3D.h 
+** CoreAnimation.h 
+** QuartzCore.h 
 
 * Security
-** SecBase.h *some differences*
-** SecCertificate.h *some differences*
-** SecIdentity.h *some differences*
-** SecImportExport.h *some differences*
-** SecKey.h *some differences*
-** SecPolicy.h *some differences*
-** SecTrust.h *some differences*
-** Security.h *some differences*
+** SecBase.h 
+** SecCertificate.h 
+** SecIdentity.h 
+** SecImportExport.h 
+** SecKey.h 
+** SecPolicy.h 
+** SecTrust.h 
+** Security.h 
 
 * SystemConfiguration
-** DHCPClientPreferences.h *some differences*
-** SCDynamicStore.h *some differences*
-** SCDynamicStoreCopyDHCPInfo.h *some differences*
-** SCDynamicStoreCopySpecific.h *some differences*
-** SCDynamicStoreKey.h *some differences*
-** SCNetwork.h *some differences*
-** SCNetworkConfiguration.h *some differences*
-** SCNetworkConnection.h *some differences*
-** SCNetworkReachability.h *some differences*
-** SCPreferences.h *some differences*
-** SCPreferencesPath.h *some differences*
-** SCPreferencesSetSpecific.h *some differences*
-** SCSchemaDefinitions.h *some differences*
-** SystemConfiguration.h *some differences*
+** DHCPClientPreferences.h 
+** SCDynamicStore.h 
+** SCDynamicStoreCopyDHCPInfo.h 
+** SCDynamicStoreCopySpecific.h 
+** SCDynamicStoreKey.h 
+** SCNetwork.h 
+** SCNetworkConfiguration.h 
+** SCNetworkConnection.h 
+** SCNetworkReachability.h 
+** SCPreferences.h 
+** SCPreferencesPath.h 
+** SCPreferencesSetSpecific.h 
+** SCSchemaDefinitions.h 
+** SystemConfiguration.h 
 

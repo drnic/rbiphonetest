@@ -56,6 +56,8 @@ class TestIPhoneRuby < Test::Unit::TestCase
       # assert_equal("", @similarities['Foundation']['NSNull'].diff)
       
       assert(@similarities['AddressBook']['ABAddressBook'].diff?)
+      
+      puts @similarities['AddressBook']['ABAddressBook'].methods_diff
     end
     
     should "have some headers the exact same" do
@@ -69,7 +71,7 @@ class TestIPhoneRuby < Test::Unit::TestCase
       end
       assert_equal(162, flattened_similarities.size)
       no_diffs = flattened_similarities.reject { |name, sim| sim.diff? }
-      assert_equal(61, no_diffs.size)
+      assert_equal(153, no_diffs.size)
     end
 
   end
