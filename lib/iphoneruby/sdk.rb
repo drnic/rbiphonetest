@@ -50,4 +50,8 @@ class IPhoneRuby::SDK
       $1
     end
   end
+  
+  def header_path(framework, header)
+    File.join frameworks_path, "#{framework}.framework", "Headers", "#{header}.h"
+  end
 end

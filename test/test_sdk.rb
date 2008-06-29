@@ -48,4 +48,10 @@ class TestIPhoneRuby < Test::Unit::TestCase
     assert_equal(IPhoneRuby::SDK.similar_framework_header_names("AddressBook"), 
       similarities['AddressBook'])
   end
+  
+  def test_path_to_header_file
+    actual = IPhoneRuby::SDK.platform(:macosx).header_path("Foundation", "NSURL")
+    expected = "/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURL.h"
+    assert_equal(expected, actual)
+  end
 end
