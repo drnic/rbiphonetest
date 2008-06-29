@@ -42,11 +42,36 @@ class TestIPhoneRuby < Test::Unit::TestCase
     assert_equal(expected, similar)
   end
   
-  def test_hash_of_similarities_between_two_platforms
-    similarities = IPhoneRuby::SDK.similarities
-    assert_equal(IPhoneRuby::SDK.similar_framework_names, similarities.keys.sort)
-    assert_equal(IPhoneRuby::SDK.similar_framework_header_names("AddressBook"), 
-      similarities['AddressBook'])
+  context "similarities between macosx and iphone platforms" do
+    setup do
+      # relatively expensive operation as it runs diff over similar header files
+      @similarities = IPhoneRuby::SDK.similarities
+    end
+
+    should "be a hash of framework => header => diff between headers" do
+      assert_equal(IPhoneRuby::SDK.similar_framework_names, @similarities.keys.sort)
+      assert_equal(IPhoneRuby::SDK.similar_framework_header_names("AddressBook"), 
+        @similarities['AddressBook'].keys.sort)
+      assert(!@similarities['Foundation']['NSNull'].diff?)
+      # assert_equal("", @similarities['Foundation']['NSNull'].diff)
+      
+      assert(@similarities['AddressBook']['ABAddressBook'].diff?)
+    end
+    
+    should "have some headers the exact same" do
+      flattened_similarities =  @similarities.inject({}) do |mem, framework_headers|
+        framework, headers = framework_headers
+        headers.each do |header_diff|
+          header, diff = header_diff
+          mem["#{framework}/#{header}"] = diff
+        end
+        mem
+      end
+      assert_equal(162, flattened_similarities.size)
+      no_diffs = flattened_similarities.reject { |name, sim| sim.diff? }
+      assert_equal(61, no_diffs.size)
+    end
+
   end
   
   def test_path_to_header_file

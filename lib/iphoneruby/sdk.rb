@@ -24,9 +24,17 @@ class IPhoneRuby::SDK
   end
   
   def self.similarities(platform_a = :macosx, platform_b = :iphone)
+    @platform_a, @platform_b = self.platform(platform_a), self.platform(platform_b)
     self.similar_framework_names(platform_a, platform_b).inject({}) do |mem, framework|
-      mem[framework] = IPhoneRuby::SDK.similar_framework_header_names(framework, 
+      headers = similar_framework_header_names(framework, 
         platform_a, platform_b)
+      mem[framework] = headers.inject({}) do |mem2, header|
+        header_path_a = @platform_a.header_path(framework, header)
+        header_path_b = @platform_b.header_path(framework, header)
+        diff = `diff -u '#{header_path_a}' '#{header_path_b}'`
+        mem2[header] = OpenStruct.new(:diff? => (diff != ""))
+        mem2
+      end
       mem
     end
   end

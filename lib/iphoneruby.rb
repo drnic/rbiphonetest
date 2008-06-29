@@ -4,4 +4,5 @@ $:.unshift(File.dirname(__FILE__)) unless
 module IPhoneRuby  
 end
 
+require "ostruct"
 require 'iphoneruby/sdk'
