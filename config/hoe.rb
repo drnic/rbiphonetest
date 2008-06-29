@@ -8,7 +8,7 @@ RUBYFORGE_PROJECT = 'iphoneruby' # The unix name for your project
 HOMEPATH = "http://github.com/drnic/iphoneruby"
 DOWNLOAD_PATH = "http://rubyforge.org/projects/#{RUBYFORGE_PROJECT}"
 EXTRA_DEPENDENCIES = [
-#  ['activesupport', '>= 1.3.1']
+ ['rubigen', '>= 1.3.2']
 ]    # An array of rubygem dependencies [name, version]
 
 @config_file = "~/.rubyforge/user-config.yml"
