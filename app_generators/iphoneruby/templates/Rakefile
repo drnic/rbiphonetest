@@ -38,7 +38,7 @@ namespace :objc do
 
     task model_name.to_sym => "build/bundles/#{model_name}.bundle"
 
-    file "build/bundles/#{model_name}.bundle" => "Classes/#{model_name}.m" do |t|
+    file "build/bundles/#{model_name}.bundle" => ["Classes/#{model_name}.m", "Classes/#{model_name}.h"] do |t|
       FileUtils.mkdir_p "build/bundles"
       FileUtils.rm Dir["build/bundles/#{model_name}.bundle"]
       sh "gcc -o build/bundles/#{model_name}.bundle -bundle -framework Foundation Classes/#{model_name}.m"
