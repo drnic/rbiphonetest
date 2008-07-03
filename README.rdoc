@@ -1,7 +1,5 @@
 = rbiphonetest - Unit Test iPhone apps with Ruby
 
-<img src="http://img.skitch.com/20080703-mqpqqhdk4e49x3yhhb8t2g9rjg.jpg" alt="rbiphonetest logo" style="float: right" />
-
 * http://rbiphonetest.rubyforge.org
 
 == DESCRIPTION:
