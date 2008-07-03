@@ -4,7 +4,12 @@
 
 == DESCRIPTION:
 
-Want to write iPhone apps with unit tests? Want to write them in Ruby? 
+Want to write iPhone apps with unit tests? Want to write them in Ruby?
+
+* Blog introduction: http://drnicwilliams.com/2008/07/04/unit-testing-iphone-apps-with-ruby-rbiphonetest/
+* Video introduction: http://www.vimeo.com/1262916
+* Google Group: http://groups.google.com/group/rbiphonetest
+* Bugs/Features: http://drnic.lighthouseapp.com/projects/13763-rbiphonetest
 
 == FEATURES/PROBLEMS:
 
@@ -51,7 +56,7 @@ If using autotest, your tests will be re-run if the test files or the Objective-
 
 == INSTALL:
 
-	sudo gem install rbiphonetest (COMING SOON)
+	sudo gem install rbiphonetest
 
 From source:
 	
