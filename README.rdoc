@@ -1,4 +1,4 @@
-= rbiphonetest
+= rbiphonetest - Unit Test iPhone apps with Ruby
 
 * http://rbiphonetest.rubyforge.org
 
@@ -10,12 +10,14 @@ Want to write iPhone apps with unit tests? Want to write them in Ruby?
 
 * Installs a Ruby-based unit testing framework into an iPhone/Objective-C/Xcode project
 * Provides generators to create Objective-C classes with associated Ruby tests
+* Uses RubyCocoa to bridge between Ruby tests and Objective-C via Loadable Bundles
 
 Known issues:
 	
 * Currently only test/unit tests created; rspec etc coming soon
 * Currently only supports Foundation framework, since its common between OS X and iPhone
 * The plan is to mock out all the UIKit.framework classes so they can exist in RubyCocoa land.
+* MacRuby (instead of RubyCocoa) is not yet tested
 
 == SYNOPSIS:
 
