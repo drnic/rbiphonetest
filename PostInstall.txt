@@ -2,7 +2,7 @@
 You can add Ruby-based unit tests to any iPhone/Xcode project by changing to the 
 project's folder in the terminal/console and running:
 
-	iphoneruby .
+	rbiphonetest .
 
 This adds the test framework, a Rakefile, and an `autotest` config file.
 

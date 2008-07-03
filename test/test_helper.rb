@@ -1,2 +1,2 @@
 require 'test/unit'
-require File.dirname(__FILE__) + '/../lib/iphoneruby'
+require File.dirname(__FILE__) + '/../lib/rbiphonetest'

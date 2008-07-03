@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-GEM_NAME = 'iphoneruby' # what ppl will type to install your gem
-RUBYFORGE_PROJECT = 'iphoneruby'
+GEM_NAME = 'rbiphonetest' # what ppl will type to install your gem
+RUBYFORGE_PROJECT = 'rbiphonetest'
 
 require 'rubygems'
 begin
@@ -17,7 +17,7 @@ require 'syntax/convertors/html'
 require 'erb'
 require File.dirname(__FILE__) + "/../lib/#{GEM_NAME}/version.rb"
 
-version  = IPhoneRuby::VERSION::STRING
+version  = RbIphoneTest::VERSION::STRING
 download = "http://rubyforge.org/projects/#{RUBYFORGE_PROJECT}"
 
 def rubyforge_project_id

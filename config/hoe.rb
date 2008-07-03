@@ -1,11 +1,11 @@
-require 'iphoneruby/version'
+require 'rbiphonetest/version'
 
 AUTHOR = 'Dr Nic Williams'
 EMAIL = "drnicwilliams@gmail.com"
 DESCRIPTION = "Want to write iPhone unit tests? Want to write them in Ruby?"
-GEM_NAME = 'iphoneruby' # what ppl will type to install your gem
-RUBYFORGE_PROJECT = 'iphoneruby' # The unix name for your project
-HOMEPATH = "http://github.com/drnic/iphoneruby"
+GEM_NAME = 'rbiphonetest' # what ppl will type to install your gem
+RUBYFORGE_PROJECT = 'rbiphonetest' # The unix name for your project
+HOMEPATH = "http://github.com/drnic/rbiphonetest"
 DOWNLOAD_PATH = "http://rubyforge.org/projects/#{RUBYFORGE_PROJECT}"
 EXTRA_DEPENDENCIES = [
  ['rubigen', '>= 1.3.2']
@@ -31,8 +31,8 @@ Run 'rubyforge setup' to prepare your env for access to Rubyforge
 end
 
 
-VERS = IPhoneRuby::VERSION::STRING
-RDOC_OPTS = ['--quiet', '--title', 'iphoneruby documentation',
+VERS = RbIphoneTest::VERSION::STRING
+RDOC_OPTS = ['--quiet', '--title', 'rbiphonetest documentation',
     "--opname", "index.html",
     "--line-numbers",
     "--main", "README",

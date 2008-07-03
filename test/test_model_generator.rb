@@ -43,6 +43,6 @@ class TestModelGenerator < Test::Unit::TestCase
   end
 
   def generator_path
-    "iphoneruby_generators"
+    "rbiphonetest_generators"
   end
 end

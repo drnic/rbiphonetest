@@ -1,17 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'rubigen'
+puts <<-EOS
+DEPRECATION: this project has been renamed to 'rbiphonetest'
 
-if %w(-v --version).include? ARGV.first
-  require 'iphoneruby/version'
-  puts "#{File.basename($0)} #{Iphoneruby::VERSION::STRING}"
-  exit(0)
-end
+Please use the new executable:
 
-require 'rubigen/scripts/generate'
-source = RubiGen::PathSource.new(:application, 
-  File.join(File.dirname(__FILE__), "../app_generators"))
-RubiGen::Base.reset_sources
-RubiGen::Base.append_sources source
-RubiGen::Scripts::Generate.new.run(ARGV, :generator => 'iphoneruby')
+  rbiphonetest .
+
+EOS

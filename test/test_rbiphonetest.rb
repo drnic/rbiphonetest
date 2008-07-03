@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestIPhoneRuby < Test::Unit::TestCase
+class TestRbIphoneTest < Test::Unit::TestCase
 
   def setup
   end

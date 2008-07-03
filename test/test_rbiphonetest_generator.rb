@@ -26,7 +26,7 @@ class TestIphonerubyGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
   def test_generator_without_options
-    run_generator('iphoneruby', [APP_ROOT], sources)
+    run_generator('rbiphonetest', [APP_ROOT], sources)
     assert_directory_exists "Classes"
     assert_directory_exists "test"
     assert_generated_file   ".autotest"

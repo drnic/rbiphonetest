@@ -1,5 +1,11 @@
+== 0.2.0 2008-07-03
+
+* Renamed project from 'iphoneruby' to 'rbiphonetest'
+* iphoneruby app: prints a deprecation message
+* USE: "rbiphonetest ." to install test framework now
+
 == 0.1.0 2008-06-28
 
 * Initial release
-	* iphoneruby cmd - adds test framework to your Xcode project
+	* rbiphonetest cmd - adds test framework to your Xcode project
 	* script/generate model FooBar - creates Classes/FooBar.h+m and test/test_foo_bar.rb

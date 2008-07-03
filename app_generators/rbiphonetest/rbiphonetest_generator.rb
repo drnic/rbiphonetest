@@ -1,4 +1,4 @@
-class IphonerubyGenerator < RubiGen::Base
+class RbiphonetestGenerator < RubiGen::Base
 
   DEFAULT_SHEBANG = File.join(Config::CONFIG['bindir'],
                               Config::CONFIG['ruby_install_name'])
@@ -26,7 +26,7 @@ class IphonerubyGenerator < RubiGen::Base
       m.file           "dot_autotest", ".autotest"
       m.file_copy_each ["test/test_helper.rb"]
 
-      m.dependency "install_rubigen_scripts", [destination_root, 'iphoneruby'],
+      m.dependency "install_rubigen_scripts", [destination_root, 'rbiphonetest'],
         :shebang => options[:shebang], :collision => :force
     end
   end
