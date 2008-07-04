@@ -28,8 +28,14 @@ class TestStoryGenerator < Test::Unit::TestCase
 
   def test_generator_without_options
     name = "myapp"
-    run_generator('story', [name], sources)
-    assert_generated_file("some_file")
+    story = "story"
+    run_generator(story, [name], sources)
+    assert_directory_exists "stories"
+    assert_generated_file   "stories/story_helper.rb"
+    assert_generated_file   "stories/#{story}_story"
+    assert_generated_file   "stories/#{story}_story.rb"
+    assert_directory_exists "stories/steps"
+    assert_genreated_file   "stories/steps/#{story}_steps.rb"
   end
 
   private
