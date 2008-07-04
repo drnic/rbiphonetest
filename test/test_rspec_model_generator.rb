@@ -28,8 +28,10 @@ class TestRspecModelGenerator < Test::Unit::TestCase
 
   def test_generator_without_options
     name = "myapp"
-    run_generator('rspec_model', [name], sources)
-    assert_generated_file("some_file")
+    model = "rspec_model"
+    run_generator(model, [name], sources)
+    assert_generated_file "spec/spec_helper.rb"
+    assert_generated_file "spec/#{model}_spec.rb"
   end
 
   private
