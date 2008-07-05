@@ -24,6 +24,7 @@ rbiphonetest_generators/rspec_model/USAGE
 rbiphonetest_generators/rspec_model/rspec_model_generator.rb
 rbiphonetest_generators/rspec_model/templates/spec.rb
 rbiphonetest_generators/rspec_model/templates/spec_helper.rb
+rbiphonetest_generators/rspec_model/templates/tasks/rspec.rake
 rbiphonetest_generators/story/USAGE
 rbiphonetest_generators/story/story_generator.rb
 rbiphonetest_generators/story/templates/steps.rb

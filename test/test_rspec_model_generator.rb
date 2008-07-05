@@ -31,6 +31,7 @@ class TestRspecModelGenerator < Test::Unit::TestCase
     run_generator("rspec_model", [name], sources)
     assert_generated_file "spec/spec_helper.rb"
     assert_generated_file "spec/#{name}_spec.rb"
+    assert_generated_file "tasks/rspec.rake"
   end
 
   private

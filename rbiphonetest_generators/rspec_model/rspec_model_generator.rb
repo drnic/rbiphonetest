@@ -16,10 +16,12 @@ class RspecModelGenerator < RubiGen::Base
     record do |m|
       # Ensure appropriate folder(s) exists
       m.directory 'spec'
+      m.directory 'tasks'
 
       # Create stubs
       m.file     "spec_helper.rb", "spec/spec_helper.rb"
       m.template "spec.rb",        "spec/#{name}_spec.rb"
+      m.file_copy_each            ["tasks/rspec.rake"]
     end
   end
 
