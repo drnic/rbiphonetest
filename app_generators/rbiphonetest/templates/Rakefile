@@ -10,8 +10,6 @@ end
 
 task :compile => "objc:compile"
 
-task :test => :compile
-
 namespace :objc do
   # look for Classes/*.m files containing a line "void Init_ClassName"
   # These are the primary classes for bundles; make a bundle for each
