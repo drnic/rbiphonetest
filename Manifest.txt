@@ -1,4 +1,3 @@
-.inputrc
 History.txt
 License.txt
 Manifest.txt
