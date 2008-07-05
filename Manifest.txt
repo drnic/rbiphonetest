@@ -20,6 +20,16 @@ rbiphonetest_generators/model/model_generator.rb
 rbiphonetest_generators/model/templates/model.h
 rbiphonetest_generators/model/templates/model.m
 rbiphonetest_generators/model/templates/test.rb
+rbiphonetest_generators/rspec_model/USAGE
+rbiphonetest_generators/rspec_model/rspec_model_generator.rb
+rbiphonetest_generators/rspec_model/templates/spec.rb
+rbiphonetest_generators/rspec_model/templates/spec_helper.rb
+rbiphonetest_generators/story/USAGE
+rbiphonetest_generators/story/story_generator.rb
+rbiphonetest_generators/story/templates/steps.rb
+rbiphonetest_generators/story/templates/story
+rbiphonetest_generators/story/templates/story.rb
+rbiphonetest_generators/story/templates/story_helper.rb
 script/console
 script/destroy
 script/generate
