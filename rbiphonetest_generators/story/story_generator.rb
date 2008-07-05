@@ -2,25 +2,27 @@ class StoryGenerator < RubiGen::Base
 
   default_options :author => nil
 
-  attr_reader :name
+  attr_reader :name, :class_name
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
     @name = args.shift
+    @class_name = @name.camelcase
     extract_options
   end
 
   def manifest
     record do |m|
       # Ensure appropriate folder(s) exists
-      m.directory 'some_folder'
+      m.directory 'stories'
+      m.directory 'stories/steps'
 
       # Create stubs
-      # m.template "template.rb",  "some_file_after_erb.rb"
-      # m.template_copy_each ["template.rb", "template2.rb"]
-      # m.file     "file",         "some_file_copied"
-      # m.file_copy_each ["path/to/file", "path/to/file2"]
+      m.file     "story_helper.rb", "stories/story_helper.rb"
+      m.template "story",           "stories/#{name}_story"
+      m.template "story.rb",        "stories/#{name}_story.rb"
+      m.template "steps.rb",        "stories/steps/#{name}_steps.rb"      
     end
   end
 

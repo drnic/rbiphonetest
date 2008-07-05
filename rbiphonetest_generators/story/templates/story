@@ -1,0 +1,13 @@
+Story: <%= name %>
+	As a ___
+	I want ___
+	So that ___
+	
+	Scenario: <%= name %>
+		Given a <%= class_name => instance
+		And ___
+		
+		When ___
+		
+		Then ___
+	
