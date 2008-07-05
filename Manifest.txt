@@ -30,7 +30,7 @@ rbiphonetest_generators/story/templates/steps.rb
 rbiphonetest_generators/story/templates/story
 rbiphonetest_generators/story/templates/story.rb
 rbiphonetest_generators/story/templates/story_helper.rb
-rbiphonetest_generators/model/templates/test_unit.rake
+rbiphonetest_generators/model/templates/tasks/test_unit.rake
 script/console
 script/destroy
 script/generate
