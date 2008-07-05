@@ -2,25 +2,24 @@ class RspecModelGenerator < RubiGen::Base
 
   default_options :author => nil
 
-  attr_reader :name
+  attr_reader :name, :class_name
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
-    @name = args.shift
+    @name = args.shift.underscore
+    @class_name = @name.camelcase
     extract_options
   end
 
   def manifest
     record do |m|
       # Ensure appropriate folder(s) exists
-      m.directory 'some_folder'
+      m.directory 'spec'
 
       # Create stubs
-      # m.template "template.rb",  "some_file_after_erb.rb"
-      # m.template_copy_each ["template.rb", "template2.rb"]
-      # m.file     "file",         "some_file_copied"
-      # m.file_copy_each ["path/to/file", "path/to/file2"]
+      m.file     "spec_helper.rb", "spec/spec_helper.rb"
+      m.template "spec.rb",        "spec/#{name}_spec.rb"
     end
   end
 
