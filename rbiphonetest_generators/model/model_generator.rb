@@ -17,11 +17,14 @@ class ModelGenerator < RubiGen::Base
       # Ensure appropriate folder(s) exists
       m.directory 'Classes'
       m.directory 'test'
+      m.directory 'tasks'
 
       # Create stubs
       m.template "model.h",  "Classes/#{class_name}.h"
       m.template "model.m",  "Classes/#{class_name}.m"
       m.template "test.rb",  "test/test_#{name}.rb"
+      m.file "test_unit.rake", "tasks/test_unit.rake"
+      
     end
   end
 
