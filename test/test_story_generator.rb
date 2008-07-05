@@ -27,15 +27,14 @@ class TestStoryGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
   def test_generator_without_options
-    name = "myapp"
-    story = "story"
-    run_generator(story, [name], sources)
+    name = "story"
+    run_generator("story", [name], sources)
     assert_directory_exists "stories"
     assert_generated_file   "stories/story_helper.rb"
-    assert_generated_file   "stories/#{story}_story"
-    assert_generated_file   "stories/#{story}_story.rb"
+    assert_generated_file   "stories/#{name}_story"
+    assert_generated_file   "stories/#{name}_story.rb"
     assert_directory_exists "stories/steps"
-    assert_genreated_file   "stories/steps/#{story}_steps.rb"
+    assert_generated_file   "stories/steps/#{name}_steps.rb"
   end
 
   private

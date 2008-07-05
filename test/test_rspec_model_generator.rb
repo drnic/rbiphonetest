@@ -27,11 +27,10 @@ class TestRspecModelGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
   def test_generator_without_options
-    name = "myapp"
-    model = "rspec_model"
-    run_generator(model, [name], sources)
+    name = "model"
+    run_generator("rspec_model", [name], sources)
     assert_generated_file "spec/spec_helper.rb"
-    assert_generated_file "spec/#{model}_spec.rb"
+    assert_generated_file "spec/#{name}_spec.rb"
   end
 
   private
