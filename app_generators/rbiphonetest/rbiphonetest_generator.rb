@@ -64,5 +64,6 @@ EOS
     BASEDIRS = %w(
       Classes
       test
+      tasks
     )
 end
