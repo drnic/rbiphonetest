@@ -4,7 +4,7 @@ Story: <%= name %>
 	So that ___
 	
 	Scenario: <%= name %>
-		Given a <%= class_name => instance
+		Given a <%= class_name %> instance
 		And ___
 		
 		When ___
