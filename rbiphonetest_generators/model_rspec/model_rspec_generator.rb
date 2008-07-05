@@ -1,4 +1,4 @@
-class RspecModelGenerator < RubiGen::Base
+class ModelRspecGenerator < RubiGen::Base
 
   default_options :author => nil
 
@@ -16,19 +16,16 @@ class RspecModelGenerator < RubiGen::Base
     record do |m|
       # Ensure appropriate folder(s) exists
       m.directory 'spec'
-      m.directory 'tasks'
 
-      # Create stubs
-      m.file     "spec_helper.rb", "spec/spec_helper.rb"
       m.template "spec.rb",        "spec/#{name}_spec.rb"
-      m.file_copy_each            ["tasks/rspec.rake"]
     end
   end
 
   protected
     def banner
       <<-EOS
-Creates a ...
+Creates an RSpec-based spec file for a model.
+NOTE: this generator is typically called via the 'model' generator.
 
 USAGE: #{$0} #{spec.name} name
 EOS

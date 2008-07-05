@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_generator_helper.rb")
 
 
-class TestRspecModelGenerator < Test::Unit::TestCase
+class TestInstallTestUnitGenerator < Test::Unit::TestCase
   include RubiGen::GeneratorTestHelper
 
   def setup
@@ -27,11 +27,11 @@ class TestRspecModelGenerator < Test::Unit::TestCase
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
   def test_generator_without_options
-    name = "model"
-    run_generator("rspec_model", [name], sources)
-    assert_generated_file "spec/spec_helper.rb"
-    assert_generated_file "spec/#{name}_spec.rb"
-    assert_generated_file "tasks/rspec.rake"
+    name = "myapp"
+    run_generator('install_test_unit', [name], sources)
+    assert_directory_exists "test"
+    assert_generated_file   "test/test_helper.rb"
+    assert_generated_file   "tasks/test_unit.rake"
   end
 
   private

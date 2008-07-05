@@ -3,9 +3,11 @@ class RbiphonetestGenerator < RubiGen::Base
   DEFAULT_SHEBANG = File.join(Config::CONFIG['bindir'],
                               Config::CONFIG['ruby_install_name'])
 
-  default_options :author => nil
+  default_options :author => nil,
+                  :test_framework => 'test_unit'
 
   attr_reader :name
+  attr_reader :test_framework
 
   def initialize(runtime_args, runtime_options = {})
     super
@@ -24,8 +26,15 @@ class RbiphonetestGenerator < RubiGen::Base
       # Create stubs
       m.file_copy_each ["Rakefile"]
       m.file           "dot_autotest", ".autotest"
-      m.file_copy_each ["test/test_helper.rb"]
-
+      
+      # Selecting a test framework
+      case test_framework
+      when "test_unit"
+        m.dependency "install_test_unit", [name], :destination => destination_root, :collision => :force
+      when "rspec"
+        m.dependency "install_rspec", [name], :destination => destination_root, :collision => :force
+      end
+      
       m.dependency "install_rubigen_scripts", [destination_root, 'rbiphonetest'],
         :shebang => options[:shebang], :collision => :force
     end
@@ -46,9 +55,9 @@ EOS
       opts.separator 'Options:'
       # For each option below, place the default
       # at the top of the file next to "default_options"
-      # opts.on("-a", "--author=\"Your Name\"", String,
-      #         "Some comment about this option",
-      #         "Default: none") { |options[:author]| }
+      opts.on("-s", "--test-with=TEST_FRAMEWORK", String,
+              "Select your preferred testing framework.",
+              "Options: test_unit (default), rspec.") { |x| options[:test_framework] = x }
       opts.on("-v", "--version", "Show the #{File.basename($0)} version number and quit.")
     end
 
@@ -57,13 +66,13 @@ EOS
       # Templates can access these value via the attr_reader-generated methods, but not the
       # raw instance variable value.
       # @author = options[:author]
+      @test_framework    = options[:test_framework] || "test_unit"
     end
 
     # Installation skeleton.  Intermediate directories are automatically
     # created so don't sweat their absence here.
     BASEDIRS = %w(
       Classes
-      test
       tasks
     )
 end

@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), "test_generator_helper.rb")
 
 
-class TestModelGenerator < Test::Unit::TestCase
+class TestInstallRspecGenerator < Test::Unit::TestCase
   include RubiGen::GeneratorTestHelper
 
   def setup
@@ -26,36 +26,12 @@ class TestModelGenerator < Test::Unit::TestCase
   #   bare_setup - place this in setup method to create the APP_ROOT folder for each test
   #   bare_teardown - place this in teardown method to destroy the TMP_ROOT or APP_ROOT folder after each test
 
-  def test_generator_for_test_unit
-    name = "my_model"
-    FileUtils.mkdir_p File.join(APP_ROOT, "test")
-    run_generator('model', [name], sources)
-    assert_directory_exists "Classes"
-    assert_directory_exists "test"
-    assert_generated_file   "Classes/MyModel.h"
-    assert_generated_file   "Classes/MyModel.m"
-    assert_generated_file   "test/test_my_model.rb"
-  end
-
-  def test_generator_for_rspec
-    name = "my_model"
-    FileUtils.mkdir_p File.join(APP_ROOT, "spec")
-    run_generator("model", [name], sources)
-    assert_directory_exists "Classes"
+  def test_generator_without_options
+    name = "myapp"
+    run_generator('install_rspec', [name], sources)
     assert_directory_exists "spec"
-    assert_generated_file   "Classes/MyModel.h"
-    assert_generated_file   "Classes/MyModel.m"
-    assert_generated_file   "spec/my_model_spec.rb"
-  end
-  
-  def test_generator_without_test_framework_installed
-    name = "my_model"
-    run_generator("model", [name], sources)
-    assert_directory_exists "Classes"
-    assert_generated_file   "Classes/MyModel.h"
-    assert_generated_file   "Classes/MyModel.m"
-    # and nothing else is created
-    assert_equal(["./test/tmp/myproject/Classes"], Dir[File.join(APP_ROOT, '*')])
+    assert_generated_file   "spec/spec_helper.rb"
+    assert_generated_file   "tasks/rspec.rake"
   end
 
   private

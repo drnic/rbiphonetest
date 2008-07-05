@@ -10,8 +10,9 @@ if %w(-v --version).include? ARGV.first
 end
 
 require 'rubigen/scripts/generate'
-source = RubiGen::PathSource.new(:application, 
-  File.join(File.dirname(__FILE__), "../app_generators"))
 RubiGen::Base.reset_sources
+source = RubiGen::PathSource.new(:application, File.join(File.dirname(__FILE__), "../app_generators"))
+RubiGen::Base.append_sources source
+source = RubiGen::PathSource.new(:application, File.join(File.dirname(__FILE__), "../rbiphonetest_generators"))
 RubiGen::Base.append_sources source
 RubiGen::Scripts::Generate.new.run(ARGV, :generator => 'rbiphonetest')

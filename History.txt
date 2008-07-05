@@ -1,3 +1,9 @@
+== 0.3.0 2008-07-05 NOT RELEASED YET
+
+* Support for test/unit AND rspec test frameworks (via install_test_unit and install_rspec generators)
+* model generator: creates test/test_model.rb or spec/model_spec.rb as required
+* story generator added for rspec developers
+
 == 0.2.0 2008-07-03
 
 * Renamed project from 'iphoneruby' to 'rbiphonetest'

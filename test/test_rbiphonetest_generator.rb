@@ -36,13 +36,21 @@ class TestIphonerubyGenerator < Test::Unit::TestCase
     assert_generated_file   "script/generate"
   end
 
-  private
-  def sources
-    [RubiGen::PathSource.new(:test, File.join(File.dirname(__FILE__),"..", generator_path))
-    ]
+  def test_generator_with_rspec
+    run_generator('rbiphonetest', [APP_ROOT], sources, {:test_framework => 'rspec'})
+    assert_directory_exists "Classes"
+    assert_directory_exists "test"
+    assert_directory_exists "tasks"
+    assert_generated_file   ".autotest"
+    assert_generated_file   "Rakefile"
+    assert_generated_file   "spec/spec_helper.rb"
+    assert_generated_file   "script/generate"
   end
 
-  def generator_path
-    "app_generators"
+  private
+  def sources
+    [RubiGen::PathSource.new(:test, File.join(File.dirname(__FILE__),"..", "app_generators")),
+      RubiGen::PathSource.new(:test, File.join(File.dirname(__FILE__),"..", "rbiphonetest_generators"))
+    ]
   end
 end
