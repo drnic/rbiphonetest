@@ -23,7 +23,7 @@ class ModelGenerator < RubiGen::Base
       m.template "model.h",  "Classes/#{class_name}.h"
       m.template "model.m",  "Classes/#{class_name}.m"
       m.template "test.rb",  "test/test_#{name}.rb"
-      m.file "test_unit.rake", "tasks/test_unit.rake"
+      m.file_copy_each      ["tasks/test_unit.rake"]
       
     end
   end

@@ -20,7 +20,7 @@ rbiphonetest_generators/model/model_generator.rb
 rbiphonetest_generators/model/templates/model.h
 rbiphonetest_generators/model/templates/model.m
 rbiphonetest_generators/model/templates/test.rb
-rbiphonetest_generators/model/templates/test_unit.rake
+rbiphonetest_generators/model/templates/tasks/test_unit.rake
 script/console
 script/destroy
 script/generate
