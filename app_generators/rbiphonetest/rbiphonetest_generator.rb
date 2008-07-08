@@ -35,7 +35,7 @@ class RbiphonetestGenerator < RubiGen::Base
         m.dependency "install_rspec", [name], :destination => destination_root, :collision => :force
       end
       
-      m.dependency "install_rubigen_scripts", [destination_root, 'rbiphonetest'],
+      m.dependency "install_rubigen_scripts", [destination_root, 'rbiphonetest', 'iphone', test_framework],
         :shebang => options[:shebang], :collision => :force
     end
   end
