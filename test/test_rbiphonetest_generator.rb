@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), "test_generator_helper.rb")
 
-class TestIphonerubyGenerator < Test::Unit::TestCase
+class TestRbIphoneTestGenerator < Test::Unit::TestCase
   include RubiGen::GeneratorTestHelper
 
   def setup
@@ -39,7 +39,7 @@ class TestIphonerubyGenerator < Test::Unit::TestCase
   def test_generator_with_rspec
     run_generator('rbiphonetest', [APP_ROOT], sources, {:test_framework => 'rspec'})
     assert_directory_exists "Classes"
-    assert_directory_exists "test"
+    assert_directory_exists "spec"
     assert_directory_exists "tasks"
     assert_generated_file   ".autotest"
     assert_generated_file   "Rakefile"
