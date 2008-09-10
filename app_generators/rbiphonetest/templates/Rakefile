@@ -1,6 +1,7 @@
 require "rubygems"
 require "rake"
 
+bundle_name    = '<%= module_name %>'
 src_paths      = %w[Classes] # any included projects, add folders here
 src_files      = FileList['Classes/**/*.m'] # any included projects, add files here
 req_frameworks = %w[Foundation] # use only frameworks available to both Cocoa + iPhone SDKs
@@ -33,8 +34,6 @@ end
 dot_o_files = src_files.map { |file| "build/" + File.basename(file).gsub(/\.m$/,'') + ".o" }
 
 namespace :objc do
-  bundle_name = File.basename File.dirname(__FILE__)
-
   task :compile => "build/bundles/#{bundle_name}.bundle" do
     if Dir.glob("**/#{bundle_name}.bundle").length == 0
       STDERR.puts "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"

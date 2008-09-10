@@ -2,13 +2,14 @@ class ModelTestUnitGenerator < RubiGen::Base
 
   default_options :author => nil
 
-  attr_reader :name, :class_name
+  attr_reader :name, :class_name, :module_name
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
-    @name = args.shift.underscore
-    @class_name = @name.camelcase
+    @name        = args.shift.underscore
+    @class_name  = @name.camelcase
+    @module_name = File.basename(destination_root).gsub("-", "_").camelize
     extract_options
   end
 

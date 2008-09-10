@@ -6,14 +6,15 @@ class RbiphonetestGenerator < RubiGen::Base
   default_options :author => nil,
                   :test_framework => 'test_unit'
 
-  attr_reader :name
+  attr_reader :name, :module_name
   attr_reader :test_framework
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
     @destination_root = File.expand_path(args.shift)
-    @name = base_name
+    @name             = base_name.gsub("-", "_")
+    @module_name      = name.camelize
     extract_options
   end
 
