@@ -47,7 +47,7 @@ namespace :objc do
     FileUtils.mkdir_p "build/bundles"
     FileUtils.rm Dir["build/bundles/#{bundle_name}.bundle"]
     sh "gcc -o build/bundles/#{bundle_name}.bundle #{dot_o_files.join(" ")} -bundle " +
-      "#{make_options '-framework', req_frameworks} " +
+      "#{make_options '-framework ', req_frameworks} " +
       "#{make_options '-l', req_libraries} " +
       "#{make_options '-I', src_paths}"
   end

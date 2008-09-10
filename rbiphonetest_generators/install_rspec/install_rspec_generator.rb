@@ -2,12 +2,13 @@ class InstallRspecGenerator < RubiGen::Base
 
   default_options :author => nil
 
-  attr_reader :name
+  attr_reader :name, :module_name
 
   def initialize(runtime_args, runtime_options = {})
     super
     usage if args.empty?
     @name = args.shift
+    @module_name = File.basename(destination_root).gsub("-", "_").camelize
     extract_options
   end
 
@@ -17,7 +18,7 @@ class InstallRspecGenerator < RubiGen::Base
       m.directory 'spec'
       m.directory 'tasks'
 
-      m.file_copy_each ["spec/spec_helper.rb"]
+      m.template_copy_each ["spec/spec_helper.rb"]
       m.file_copy_each ["tasks/rspec.rake"]
     end
   end

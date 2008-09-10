@@ -25,7 +25,7 @@ class RbiphonetestGenerator < RubiGen::Base
       BASEDIRS.each { |path| m.directory path }
 
       # Create stubs
-      m.file_copy_each ["Rakefile"]
+      m.template_copy_each ["Rakefile"]
       m.file           "dot_autotest", ".autotest"
       
       # Selecting a test framework
