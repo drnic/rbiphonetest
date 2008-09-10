@@ -9,7 +9,7 @@ end
 
 Autotest.add_hook :initialize do |at|
   at.add_mapping(/Classes\/(.*)\.[mh]/) do |_, m|
-    ["test/test_#{m[1].underscore}.rb"]
+    ["spec/#{m[1].underscore}_spec.rb", "test/test_#{m[1].underscore}.rb"]
   end
 end
 
