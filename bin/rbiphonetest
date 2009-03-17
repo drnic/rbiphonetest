@@ -5,14 +5,16 @@ require 'rubigen'
 
 if %w(-v --version).include? ARGV.first
   require 'rbiphonetest/version'
-  puts "#{File.basename($0)} #{Iphoneruby::VERSION::STRING}"
+  puts "#{File.basename($0)} #{RbIphoneTest::VERSION::STRING}"
   exit(0)
 end
 
 require 'rubigen/scripts/generate'
 RubiGen::Base.reset_sources
-source = RubiGen::PathSource.new(:application, File.join(File.dirname(__FILE__), "../app_generators"))
-RubiGen::Base.append_sources source
-source = RubiGen::PathSource.new(:application, File.join(File.dirname(__FILE__), "../rbiphonetest_generators"))
-RubiGen::Base.append_sources source
+RubiGen::Base.use_application_sources! :rubygems
+RubiGen::Base.prepend_sources(*[ 
+  RubiGen::PathSource.new(:app, File.join(File.dirname(__FILE__), "..", "app_generators")),
+  RubiGen::PathSource.new(:app, File.join(File.dirname(__FILE__), "..", "rbiphonetest_generators"))
+])
+
 RubiGen::Scripts::Generate.new.run(ARGV, :generator => 'rbiphonetest')

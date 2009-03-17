@@ -1,4 +1,4 @@
-class RbIphoneTestGenerator < RubiGen::Base
+class RbiphonetestGenerator < RubiGen::Base
 
   DEFAULT_SHEBANG = File.join(Config::CONFIG['bindir'],
                               Config::CONFIG['ruby_install_name'])

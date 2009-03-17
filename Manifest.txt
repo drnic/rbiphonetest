@@ -10,7 +10,10 @@ app_generators/rbiphonetest/templates/dot_autotest
 bin/iphoneruby
 bin/rbiphonetest
 features/development.feature
+features/new_project.feature
+features/step_definitions/cli_steps.rb
 features/step_definitions/common_steps.rb
+features/support/cli.rb
 features/support/env.rb
 lib/rbiphonetest.rb
 lib/rbiphonetest/version.rb
