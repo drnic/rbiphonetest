@@ -1,5 +1,4 @@
 History.txt
-License.txt
 Manifest.txt
 PostInstall.txt
 README.rdoc
@@ -10,8 +9,9 @@ app_generators/rbiphonetest/templates/Rakefile
 app_generators/rbiphonetest/templates/dot_autotest
 bin/iphoneruby
 bin/rbiphonetest
-config/hoe.rb
-config/requirements.rb
+features/development.feature
+features/steps/common.rb
+features/steps/env.rb
 lib/rbiphonetest.rb
 lib/rbiphonetest/version.rb
 rbiphonetest_generators/install_rspec/USAGE
@@ -41,9 +41,6 @@ script/destroy
 script/generate
 script/txt2html
 setup.rb
-tasks/deployment.rake
-tasks/environment.rake
-tasks/website.rake
 test/test_generator_helper.rb
 test/test_helper.rb
 test/test_install_rspec_generator.rb
