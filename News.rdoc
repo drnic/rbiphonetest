@@ -1,0 +1,7 @@
+== 0.4.0 2009-03-17 rbiphonetest critical bug fix: supports 2+ dependent models/classes
+
+<a href="http://drnicwilliams.com/2008/07/04/unit-testing-iphone-apps-with-ruby-rbiphonetest/">rbiphonetest</a> had a very nasty/critical bug where you couldn't develop/test Objective-C classes that were dependent upon each other. Individual projects that used rbiphonetest solved this problem, but only now has the solution be refactored back into the rbiphonetest generator. Yay!
+
+The internals of the rbiphonetest gem are now covered by cucumber scenarios too so it will be much easier to add features with confidence.
+
+ALSO: Ben Scofield wrote an article about rbiphonetest in edition 2 of <a href="http://therubyist.com">The Rubyist</a> (free in PDF form)
