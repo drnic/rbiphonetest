@@ -82,6 +82,15 @@ Then /^file with name matching '(.*)' is created/ do |pattern|
   end
 end
 
+Then /^file '(.*)' contents (does|does not) match \/(.*)\// do |file, does, regex|
+  in_project_folder do
+    actual_output = File.read(file)
+    (does == 'does') ?
+      actual_output.should(match(/#{regex}/)) :
+      actual_output.should_not(match(/#{regex}/))
+  end
+end
+
 Then /gem file '(.*)' and generated file '(.*)' should be the same/ do |gem_file, project_file|
   File.exists?(gem_file).should be_true
   File.exists?(project_file).should be_true
@@ -114,15 +123,6 @@ Then /^output (does|does not) match \/(.*)\// do |does, regex|
   (does == 'does') ?
     actual_output.should(match(/#{regex}/)) :
     actual_output.should_not(match(/#{regex}/)) 
-end
-
-Then /^contents of file '(.*)' (does|does not) match \/(.*)\// do |file, does, regex|
-  in_project_folder do
-    actual_output = File.read(file)
-    (does == 'does') ?
-      actual_output.should(match(/#{regex}/)) :
-      actual_output.should_not(match(/#{regex}/))
-  end
 end
 
 Then /^all (\d+) tests pass/ do |expected_test_count|

@@ -26,7 +26,9 @@ class RbiphonetestGenerator < RubiGen::Base
 
       # Create stubs
       m.template_copy_each ["Rakefile"]
-      m.file           "dot_autotest", ".autotest"
+      m.file    "dot_autotest", ".autotest"
+      m.template "Classes/module.m.erb", "Classes/#{module_name}.m"
+      m.template "Classes/module.h.erb", "Classes/#{module_name}.h"
       
       # Selecting a test framework
       case test_framework

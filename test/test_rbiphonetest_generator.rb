@@ -32,6 +32,8 @@ class TestRbIphoneTestGenerator < Test::Unit::TestCase
     assert_directory_exists "tasks"
     assert_generated_file   ".autotest"
     assert_generated_file   "Rakefile"
+    assert_generated_file   "Classes/MyProject.h"
+    assert_generated_file   "Classes/MyProject.m"
     assert_generated_file   "test/test_helper.rb"
     assert_generated_file   "script/generate"
   end
@@ -43,6 +45,8 @@ class TestRbIphoneTestGenerator < Test::Unit::TestCase
     assert_directory_exists "tasks"
     assert_generated_file   ".autotest"
     assert_generated_file   "Rakefile"
+    assert_generated_file   "Classes/MyProject.h"
+    assert_generated_file   "Classes/MyProject.m"
     assert_generated_file   "spec/spec_helper.rb"
     assert_generated_file   "script/generate"
   end

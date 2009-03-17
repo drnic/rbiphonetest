@@ -19,4 +19,17 @@ Feature: Generate, compile and test Objective-C classes with Ruby tests
     And file 'Classes/Person.h' is created
     And file 'spec/person_spec.rb' is created
     When I invoke task 'rake spec'
-    Then all 1 tests pass
+    Then all 1 examples pass
+
+  Scenario: Generate multiple models and its tests should pass
+    Given an existing rbiphonetest scaffold using options '' [called 'my_project']
+    When I invoke 'model' generator with arguments 'Person'
+    When I invoke 'model' generator with arguments 'Company'
+    Then file 'Classes/Person.m' is created
+    And file 'Classes/Person.h' is created
+    And file 'test/test_person.rb' is created
+    Then file 'Classes/Company.m' is created
+    And file 'Classes/Company.h' is created
+    And file 'test/test_company.rb' is created
+    When I invoke task 'rake test'
+    Then all 2 tests pass

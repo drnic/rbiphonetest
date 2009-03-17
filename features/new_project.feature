@@ -7,6 +7,10 @@ Feature: Created a new Objective-C project that can be tested by Ruby tests
     Given a safe folder
     When I execute rbiphonetest for project 'my_project' with options ''
     Then file 'Rakefile' is created
+    And file 'Classes/MyProject.h' is created
+    And file 'Classes/MyProject.m' is created
+    And file 'Classes/MyProject.m' contents does match /void Init_MyProject\(\) \{ \}/
+    And file 'Classes/MyProject.m' contents does match /#import "MyProject.h"/
     And Rakefile can display tasks successfully
     And file 'test/test_helper.rb' is created
   
