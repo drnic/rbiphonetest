@@ -7,3 +7,8 @@ When /^I execute rbiphonetest for project '(.*)' with options '(.*)'/ do |projec
   end
 end
 
+Given /^an existing rbiphonetest scaffold using options '(.*)' \[called '(.*)'\]/ do |arguments, project_name|
+  Given "a safe folder"
+  Given "I execute rbiphonetest for project '#{project_name}' with options '#{arguments}'"
+end
+
