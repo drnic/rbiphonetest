@@ -7,7 +7,7 @@ $hoe = Hoe.new('rbiphonetest', RbIphoneTest::VERSION) do |p|
   p.developer('Dr Nic Williams', 'drnicwilliams@gmail.com')
   p.changes              = p.paragraphs_of('History.txt', 0..1).join("\n\n")
   p.post_install_message = 'PostInstall.txt'
-  p.extra_dev_deps = [
+  p.extra_deps = [
     ['newgem', ">= #{::Newgem::VERSION}"]
   ]
   
