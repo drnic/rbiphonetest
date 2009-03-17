@@ -5,15 +5,19 @@ README.rdoc
 Rakefile
 app_generators/rbiphonetest/USAGE
 app_generators/rbiphonetest/rbiphonetest_generator.rb
+app_generators/rbiphonetest/templates/Classes/module.h.erb
+app_generators/rbiphonetest/templates/Classes/module.m.erb
 app_generators/rbiphonetest/templates/Rakefile
 app_generators/rbiphonetest/templates/dot_autotest
 bin/iphoneruby
 bin/rbiphonetest
 features/development.feature
+features/models.feature
 features/new_project.feature
 features/step_definitions/cli_steps.rb
 features/step_definitions/common_steps.rb
 features/support/cli.rb
+features/support/common.rb
 features/support/env.rb
 lib/rbiphonetest.rb
 lib/rbiphonetest/version.rb
@@ -49,6 +53,5 @@ test/test_helper.rb
 test/test_install_rspec_generator.rb
 test/test_install_test_unit_generator.rb
 test/test_model_generator.rb
-test/test_rbiphonetest.rb
 test/test_rbiphonetest_generator.rb
 test/test_story_generator.rb
