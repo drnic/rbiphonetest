@@ -1,8 +1,8 @@
 == 0.4.0 2009-03-17 NOT RELEASED
 
-* No more dependency issues between classes being tested: only one bundle created - all ObjC code being tested is compiled into one bundle
+* TODO No more dependency issues between classes being tested: only one bundle created - all ObjC code being tested is compiled into one bundle
 * Upgrade internals to use latest newgem (removed bunch of dev-only files)
-* Behaviour of rbiphonetest covered by Cucumber scenarios
+* TODO Behaviour of rbiphonetest covered by Cucumber scenarios
 
 == 0.3.0 2008-07-05
 
